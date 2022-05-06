@@ -17,7 +17,7 @@ namespace _1.Semester_Projekt.Services
         }
 
 
-        public void AddFakta(Fakta fakta)
+        public void CreateFakta(Fakta fakta)
         {
             if (!(faktas.ContainsKey(fakta.Id)))
             {
@@ -47,6 +47,17 @@ namespace _1.Semester_Projekt.Services
                     fak.Emne = fakta.Emne;
                     fak.Navn = fakta.Navn;
                     fak.Tekst = fakta.Tekst;
+                }
+            }
+        }
+
+        public void DeleteFakta(Fakta fakta)
+        {
+            foreach (var fak in faktas.Values)
+            {
+                if (fak.Id == fakta.Id)
+                {
+                    faktas.Remove(fak.Id);
                 }
             }
         }
