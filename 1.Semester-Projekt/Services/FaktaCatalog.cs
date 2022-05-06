@@ -14,7 +14,8 @@ namespace _1.Semester_Projekt.Services
         {
             faktas = new Dictionary<double, Fakta>();
             faktas.Add(1, new Fakta() { Id = 1, Emne = "Dans", Navn = "HipHop", Tekst = "HipHop er en dans" });
-        }
+            // Andre Emner: Kultur, Dans, Genre, Fans, Lys, Lyd, Politik, Instrumenter, Afspillere.
+        }    
 
 
         public void CreateFakta(Fakta fakta)
