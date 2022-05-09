@@ -8,7 +8,7 @@ namespace _1.Semester_Projekt.Models
     public class Fakta
     {
 
-        public double Id { get; set; }
+        public int Id { get; set; }
         public string Emne { get; set; }
         public string Navn { get; set; }
         public string Tekst { get; set; }
