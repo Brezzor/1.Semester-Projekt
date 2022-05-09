@@ -4,12 +4,13 @@ using System.Linq;
 using System.Threading.Tasks;
 using _1.Semester_Projekt.Models;
 using _1.Semester_Projekt.Interfaces;
+using _1.Semester_Projekt.Helpers;
 
 namespace _1.Semester_Projekt.Services
 {
     public class FaktaJson : IFaktaRepository
-
     {
+        string JsonFileName = "~/Data/jsonFakta.json";
 
         public Dictionary<int, Fakta> GetAllFakta()
         {
@@ -30,7 +31,7 @@ namespace _1.Semester_Projekt.Services
             return faktas[id];
         }
 
-        void UpdateFakta(Fakta fakta)
+        public void UpdateFakta(Fakta fakta)
         {
             Dictionary<int, Fakta> faktas = GetAllFakta();
             foreach (var f in faktas.Values)
@@ -42,7 +43,7 @@ namespace _1.Semester_Projekt.Services
                 JsonFileWritter.WriteToJson(faktas, JsonFileName);
             }
         }
-        void DeleteFakta(Fakta fakta)
+        public void DeleteFakta(Fakta fakta)
         {
             Dictionary<int, Fakta> faktas = GetAllFakta();
             foreach (var f in faktas.Values)
