@@ -8,25 +8,14 @@
     <h1 class="display-4">Welcome To @ViewData["Title"]</h1>
 </div>
 
-<div class="text-center facts-buttons">
-    <a class="btn btn-orange" asp-area="" asp-page="/FactsPages/PsyTrance">Psy Trance</a>
-    <a class="btn btn-orange" asp-area="" asp-page="/FactsPages/Dans">Dans</a>
+<div class="container text-center">
+    <div class="row">
+        @foreach (var item in Model.Faktas)
+        {
+            <div class="col-sm-4">
+            <h3>@item.Value.Emne @item.Value.Id</h3>
+            <p>@item.Value.Id</p>
+            </div>
+        }
+    </div>
 </div>
-
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                Id
-            </th>
-            <th>
-                Emne
-            </th>
-            <th>
-                Link
-            </th>
-        </tr>
-    </thead>
-    <tbody>
-    </tbody>
-</table>

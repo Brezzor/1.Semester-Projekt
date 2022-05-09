@@ -10,7 +10,7 @@ namespace _1.Semester_Projekt.Services
 {
     public class FaktaJson : IFaktaRepository
     {
-        string JsonFileName = "~/Data/jsonFakta.json";
+        string JsonFileName = "./Data/jsonFakta.json";
 
         public Dictionary<int, Fakta> GetAllFakta()
         {
