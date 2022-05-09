@@ -12,10 +12,11 @@
     <div class="row">
         @foreach (var item in Model.Faktas)
         {
-            <div class="col-sm-4">
+        <div class="col-sm-4" style="background-image: url(../wwwroot/images/Headbang.jfif)">
+            <img src="~/images/@item.Value.ImageName" width="60" height="70">
             <h3>@item.Value.Emne @item.Value.Id</h3>
-            <p>@item.Value.Id</p>
-            </div>
+            <a class="btn btn-orange" asp-page="@item.Value.Path">Go To</a>
+        </div>
         }
     </div>
 </div>

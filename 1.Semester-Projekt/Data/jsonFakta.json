@@ -1,19 +1,27 @@
 {
   "1": {
     "Id": 1,
-    "Emne": "Dans"
+    "Emne": "Dans",
+    "Path": "/FactsPages/Dans",
+    "ImageName": "Headbang.jfif"
   },
   "2": {
     "Id": 2,
-    "Emne": "Dans"
+    "Emne": "Dans",
+    "Path": "/FactsPages/Dans",
+    "ImageName": "Headbang.jfif"
   },
   "3": {
     "Id": 3,
-    "Emne": "Dans"
+    "Emne": "Dans",
+    "Path": "/FactsPages/Dans",
+    "ImageName": "Headbang.jfif"
   },
   "4": {
     "Id": 4,
-    "Emne": "Dans"
+    "Emne": "Dans",
+    "Path": "/FactsPages/Dans",
+    "ImageName": "Headbang.jfif"
   }
 }
 

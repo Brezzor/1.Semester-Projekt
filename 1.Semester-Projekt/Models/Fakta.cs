@@ -10,7 +10,7 @@ namespace _1.Semester_Projekt.Models
 
         public int Id { get; set; }
         public string Emne { get; set; }
-        public string Navn { get; set; }
-        public string Tekst { get; set; }
+        public string Path { get; set; }
+        public string ImageName { get; set; }
     }
 }
