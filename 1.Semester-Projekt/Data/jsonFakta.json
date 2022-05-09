@@ -1,14 +1,6 @@
 {
   "1": {
     "Id": 1,
-    "Emne": "Dans",
-    "Navn": "HipHop",
-    "Tekst": "HipHop er en dans"
-  }
-  "2": {
-    "Id": 2,
-    "Emne": "Lyd",
-    "Navn": "Rock",
-    "Tekst": "Rock er musik"
+    "Emne": "Dans"
   }
 }
