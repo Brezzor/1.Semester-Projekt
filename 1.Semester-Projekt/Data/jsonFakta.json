@@ -4,18 +4,18 @@
     "Emne": "Dans",
     "Path": "/FactsPages/Dans",
     "ImageName": "Headbang.jfif",
-    "EmneTekst": 
-    {
-      "Header": "DanseType",
-      "Body": "Blah blah blah"
-    }
+    "Header": "DanseType",
+    "Body": "Blah blah blah"
   },
+
   "2": {
     "Id": 2,
     "Emne": "Dans",
     "Path": "/FactsPages/Dans",
-    "ImageName": "Headbang.jfif"
-    
+    "ImageName": "Headbang.jfif",
+    "Header": "DanseType",
+    "Body": "Blah blah blah"
+
   },
   "3": {
     "Id": 3,

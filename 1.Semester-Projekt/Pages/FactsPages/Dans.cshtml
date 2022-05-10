@@ -20,6 +20,19 @@
         </tr>
     </thead>
     <tbody>
+        @foreach (var item in Model.Faktas)
+        {
+            <tr>
+                <td>
+                    @item.Value.Id
+                </td>
+                <td>
+                    @item.Value.Header
+                </td>
+                <td>
+                    @item.Value.Body
+                </td>
+            </tr>}
     </tbody>
 
 </table>
