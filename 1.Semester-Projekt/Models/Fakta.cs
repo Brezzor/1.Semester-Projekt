@@ -12,5 +12,9 @@ namespace _1.Semester_Projekt.Models
         public string Emne { get; set; }
         public string Path { get; set; }
         public string ImageName { get; set; }
+        public string EmneTekst { get; set; }
+
+        public string Header { get; set; }
+        public string Body { get; set; }
     }
 }

@@ -3,25 +3,49 @@
     "Id": 1,
     "Emne": "Dans",
     "Path": "/FactsPages/Dans",
-    "ImageName": "Headbang.jfif"
+    "ImageName": "Headbang.jfif",
+    "EmneTekst": [
+      {
+        "Header": "DanseType",
+        "Body": "Blah blah blah"
+      }
+    ]
   },
   "2": {
     "Id": 2,
     "Emne": "Dans",
     "Path": "/FactsPages/Dans",
-    "ImageName": "Headbang.jfif"
+    "ImageName": "Headbang.jfif",
+    "EmneTekst": [
+      {
+        "Header": "DanseType",
+        "Body": "Blah blah blah"
+      }
+    ]
   },
   "3": {
     "Id": 3,
     "Emne": "Dans",
     "Path": "/FactsPages/Dans",
-    "ImageName": "Headbang.jfif"
+    "ImageName": "Headbang.jfif",
+    "EmneTekst": [
+      {
+        "Header": "DanseType",
+        "Body": "Blah blah blah"
+      }
+    ]
   },
   "4": {
     "Id": 4,
     "Emne": "Psy Trance",
     "Path": "/FactsPages/PsyTrance",
-    "ImageName": "Headbang.jfif"
+    "ImageName": "Headbang.jfif",
+    "EmneTekst": [
+      {
+        "Header": "DanseType",
+        "Body": "Blah blah blah"
+      }
+    ]
   }
 }
 
