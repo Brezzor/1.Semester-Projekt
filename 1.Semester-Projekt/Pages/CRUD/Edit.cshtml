@@ -1,0 +1,43 @@
+﻿@page
+@model _1.Semester_Projekt.Pages.EditModel
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div class="text-center">
+    <h1>@ViewData["Title"]</h1>
+</div>
+
+<button class="btn btn-orange mb-4 mt-4" asp-page="/CreateFacts">Create new fact</button>
+
+<table class="table table-bordered table-dark">
+    <thead>
+        <tr>
+            <th>
+                ID
+            </th>
+            <th>
+                Emne
+            </th>
+            <th>
+                EmneTekst
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Faktas)
+        {
+        <tr>
+            <td>
+                @item.Value.Id
+            </td>
+            <td>
+                @item.Value.Emne
+            </td>
+            <td>
+                @item.Value.EmneTekst
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
