@@ -3,15 +3,13 @@
     "Id": 1,
     "Emne": "Kultur",
     "Path": "/FactsPages/Kultur",
-    "ImageName": "headbang.jpg",
-    "Body": "Blah blah blah"
+    "ImageName": "headbang.jpg"
   },
   "2": {
     "Id": 2,
     "Emne": "Dans",
     "Path": "/FactsPages/Dans",
-    "ImageName": "headbang.jpg",
-    "Body": "Blah blah blah"
+    "ImageName": "headbang.jpg"
   },
   "3": {
     "Id": 3,

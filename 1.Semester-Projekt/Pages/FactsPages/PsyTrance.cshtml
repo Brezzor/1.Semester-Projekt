@@ -1,11 +1,9 @@
 ﻿@page
 @model PsyTranceModel
 @{
-    ViewData["Title"] = "Test Page";
+    ViewData["Title"] = Model.Fakta.Emne;
 }
-
 <div class="text-center">
-    <h1 class="display-4">Welcome To @ViewData["Title"]</h1>
-
+    <h1 class="display-4">@Model.Fakta.Emne</h1>
     <audio controls src="~/sounds/psy-trance.mp3" type="audio/mp3"></audio>
 </div>

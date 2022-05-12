@@ -13,7 +13,7 @@
                 <div class="col-4 mb-4">
                     <div class="" style="height: 15rem; border-radius: 1rem; background-image: url(' /images/@item.Value.ImageName'); background-repeat: no-repeat; background-size: cover; background-position:center;">
                         <h3 class="text-white p-3">@item.Value.Emne</h3>
-                        <a class="btn btn-orange" asp-page="@item.Value.Path">Go To</a>
+                        <a class="btn btn-orange" asp-route-id="@item.Key" asp-page="@item.Value.Path">Go To</a>
                     </div>
                 </div>
             }

@@ -18,8 +18,10 @@ namespace _1.Semester_Projekt
         }
         public Dictionary<int, Fakta> Faktas { get; private set; }
 
+        public string PageName { get; set; }
+
         public IActionResult OnGet()
-        {
+        {            
             Faktas = catalog.GetAllFakta();
             return Page();
         }
