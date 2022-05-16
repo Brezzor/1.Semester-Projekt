@@ -9,11 +9,11 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace _1.Semester_Projekt.Pages
 {
-    public class EditFactsModel : PageModel
+    public class EditFactModel : PageModel
     {
         public Fakta Fact { get; set; }
         private IFaktaRepository catalog;
-        public EditFactsModel (IFaktaRepository repository)
+        public EditFactModel (IFaktaRepository repository)
         {
             catalog = repository;
         }
