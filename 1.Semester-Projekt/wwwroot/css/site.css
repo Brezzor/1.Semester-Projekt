@@ -10,11 +10,16 @@ for details on configuring this project to bundle and minify static web assets. 
 }
 
 .btn-orange {
-    background-color: orange;    
+    background-color: #ff9b21;    
 }
 
 .btn-orange:hover {
-    background-color: #ff9b21;    
+    background-color: orange;    
+}
+
+.table-black {
+    color: white;
+    background-color: black;
 }
 
 a.navbar-brand {

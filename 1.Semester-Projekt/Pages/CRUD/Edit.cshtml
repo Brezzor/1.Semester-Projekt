@@ -1,16 +1,16 @@
 ﻿@page
 @model _1.Semester_Projekt.Pages.EditModel
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Edit Page";
 }
 
 <div class="text-center">
-    <h1>@ViewData["Title"]</h1>
+    <h1 class="display-4">@ViewData["Title"]</h1>
 </div>
 
-<button class="btn btn-orange mb-4 mt-4" asp-page="/CreateFacts">Create new fact</button>
+<a class="btn btn-orange mb-4 mt-4" asp-page="CreateFacts">Create new fact</a>
 
-<table class="table table-bordered table-dark">
+<table class="table table-bordered table-black">
     <thead>
         <tr>
             <th>

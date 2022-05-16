@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace _1.Semester_Projekt.Pages.CRUD
+namespace _1.Semester_Projekt.Pages
 {
-    public class IndexModel : PageModel
+    public class EditFactsModel : PageModel
     {
         public void OnGet()
         {
