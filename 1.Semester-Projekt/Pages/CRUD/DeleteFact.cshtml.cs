@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace _1.Semester_Projekt.Pages
 {
-    public class EditFactsModel : PageModel
+    public class DeleteFactModel : PageModel
     {
         public void OnGet()
         {
