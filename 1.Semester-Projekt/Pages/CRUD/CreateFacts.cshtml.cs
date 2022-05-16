@@ -6,13 +6,14 @@ using _1.Semester_Projekt.Interfaces;
 using _1.Semester_Projekt.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using _1.Semester_Projekt.Helpers;
 
 namespace _1.Semester_Projekt.Pages
 {
     public class CreateModel : PageModel
     {
         [BindProperty]
-        public Dictionary<int, Fakta> Faktas { get; set; }
+        public Fakta Fakta { get; set; }
 
         private IFaktaRepository catalog;
         public CreateModel(IFaktaRepository repository)
@@ -22,8 +23,12 @@ namespace _1.Semester_Projekt.Pages
 
         public IActionResult OnGet()
         {
-            Faktas = catalog.GetAllFakta();
             return Page();
+        }
+        public IActionResult OnPost()
+        {
+            catalog.CreateFakta(Fakta);
+            return RedirectToPage("/Index");
         }
     }
 }
