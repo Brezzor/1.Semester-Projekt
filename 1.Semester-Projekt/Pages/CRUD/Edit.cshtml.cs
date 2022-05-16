@@ -12,10 +12,12 @@ namespace _1.Semester_Projekt.Pages
     public class EditModel : PageModel
     {
         private IFaktaRepository catalog;
+
         public EditModel(IFaktaRepository repository)
         {
             catalog = repository;
         }
+
         public Dictionary<int, Fakta> Faktas { get; private set; }
 
         public IActionResult OnGet()
@@ -25,12 +27,6 @@ namespace _1.Semester_Projekt.Pages
             {
                 Faktas = catalog.GetAllFakta();
             }
-            return Page();
-        }
-        
-        public IActionResult DeleteFact(int id)
-        {
-            catalog.DeleteFakta(catalog.ReadFakta(id));
             return Page();
         }
     }
