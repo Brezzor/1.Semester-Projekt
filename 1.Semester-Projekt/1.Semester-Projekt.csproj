@@ -9,4 +9,28 @@
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Update="Pages\CRUD\EditFact - Copy %282%29 - Copy.cshtml.cs">
+      <DependentUpon>EditFact - Copy (2).cshtml.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\CRUD\EditFact - Copy %282%29.cshtml.cs">
+      <DependentUpon>EditFact.cshtml.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\CRUD\EditFact - Copy %283%29.cshtml.cs">
+      <DependentUpon>EditFact.cshtml.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\CRUD\EditFact - Copy - Copy %282%29.cshtml.cs">
+      <DependentUpon>EditFact - Copy.cshtml.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\CRUD\EditFact - Copy - Copy - Copy.cshtml.cs">
+      <DependentUpon>EditFact - Copy - Copy.cshtml.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\CRUD\EditFact - Copy - Copy.cshtml.cs">
+      <DependentUpon>EditFact - Copy.cshtml.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\CRUD\EditFact - Copy.cshtml.cs">
+      <DependentUpon>EditFact.cshtml.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
 </Project>
