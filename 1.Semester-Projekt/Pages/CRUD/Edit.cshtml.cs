@@ -27,5 +27,11 @@ namespace _1.Semester_Projekt.Pages
             }
             return Page();
         }
+        
+        public IActionResult DeleteFact(int id)
+        {
+            catalog.DeleteFakta(catalog.ReadFakta(id));
+            return Page();
+        }
     }
 }
