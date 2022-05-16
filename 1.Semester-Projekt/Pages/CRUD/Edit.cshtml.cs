@@ -29,5 +29,10 @@ namespace _1.Semester_Projekt.Pages
             }
             return Page();
         }
+
+        public IActionResult OnGetOnClick()
+        {
+            return Page();
+        }
     }
 }
