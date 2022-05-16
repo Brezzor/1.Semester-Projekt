@@ -18,9 +18,9 @@ namespace _1.Semester_Projekt.Pages
             catalog = repository;
         }
 
-        public void OnGet() //(int id) 
+        public void OnGet(int id) 
         {
-            //Fact = catalog.ReadFakta(id);
+            Fact = catalog.ReadFakta(id);
         }
 
         public IActionResult OnPost()
