@@ -20,12 +20,10 @@ namespace _1.Semester_Projekt.Pages
 
         public void OnGet(int id) 
         {
-            Fact = catalog.ReadFakta(id);
         }
 
         public IActionResult OnPost()
         {
-            catalog.UpdateFakta(Fact);
             return RedirectToPage("Edit");
         }
     }

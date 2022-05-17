@@ -11,19 +11,8 @@ namespace _1.Semester_Projekt.Pages
 {
     public class MusikGenreModel : PageModel
     {
-        [BindProperty]
-        public Fakta Fakta { get; set; }
-
-        private IFaktaRepository catalog;
-
-        public MusikGenreModel(IFaktaRepository repository)
+        public IActionResult OnGet()
         {
-            catalog = repository;
-        }
-
-        public IActionResult OnGet(int id)
-        {
-            Fakta = catalog.ReadFakta(id);
             return Page();
         }
     }

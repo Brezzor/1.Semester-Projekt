@@ -27,7 +27,6 @@ namespace _1.Semester_Projekt.Pages
         }
         public IActionResult OnPost()
         {
-            catalog.CreateFakta(Fakta);
             return RedirectToPage("/Index");
         }
     }

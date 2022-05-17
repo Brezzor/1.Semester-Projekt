@@ -1,22 +1,67 @@
 ﻿@page 
 @model FactsPageModel
 @{
-    ViewData["Title"] = "Facts List";
+    ViewData["Title"] = "Facts Page";
 }
 
 <div class="text-center">
     <h1 class="display-4">Welcome To @ViewData["Title"]</h1>
     <div class="container">
         <div class="row">
-            @foreach (var item in Model.Faktas)
-            {
-                <div class="col-4 mb-4">
-                    <div class="" style="height: 15rem; border-radius: 1rem; background-image: url(' /images/@item.Value.ImageName'); background-repeat: no-repeat; background-size: cover; background-position:center;">
-                        <h3 class="text-white p-3">@item.Value.Emne</h3>
-                        <a class="btn btn-orange" asp-route-id="@item.Key" asp-page="@item.Value.Path">Go To</a>
-                    </div>
+            <div class="col-4 mb-4">
+                <div class="fact-col bg-image bg-image-afspillere">
+                    <h3 class="text-white p-3">Afspillere</h3>
+                    <a class="btn btn-orange" asp-page="/FactsPages/Afspillere">Go To</a>
                 </div>
-            }
+            </div>
+            <div class="col-4 mb-4">
+                <div class="fact-col bg-image bg-image-dans">
+                    <h3 class="text-white p-3">Dans</h3>
+                    <a class="btn btn-orange" asp-page="/FactsPages/Dans">Go To</a>
+                </div>
+            </div>
+            <div class="col-4 mb-4">
+                <div class="fact-col bg-image bg-image-fans">
+                    <h3 class="text-white p-3">Fans</h3>
+                    <a class="btn btn-orange" asp-page="/FactsPages/Fans">Go To</a>
+                </div>
+            </div>
+            <div class="col-4 mb-4">
+                <div class="fact-col bg-image bg-image-instrumenter">
+                    <h3 class="text-white p-3">Instrumenter</h3>
+                    <a class="btn btn-orange" asp-page="/FactsPages/Instrumenter">Go To</a>
+                </div>
+            </div>
+            <div class="col-4 mb-4">
+                <div class="fact-col bg-image bg-image-kultur">
+                    <h3 class="text-white p-3">Kultur</h3>
+                    <a class="btn btn-orange" asp-page="/FactsPages/Kultur">Go To</a>
+                </div>
+            </div>
+            <div class="col-4 mb-4">
+                <div class="fact-col bg-image bg-image-lyd">
+                    <h3 class="text-white p-3">Lyd</h3>
+                    <a class="btn btn-orange" asp-page="/FactsPages/Lyd">Go To</a>
+                </div>
+            </div>
+            <div class="col-4 mb-4">
+                <div class="fact-col bg-image bg-image-lys">
+                    <h3 class="text-white p-3">Lys</h3>
+                    <a class="btn btn-orange" asp-page="/FactsPages/Lys">Go To</a>
+                </div>
+            </div>
+            <div class="col-4 mb-4">
+                <div class="fact-col bg-image bg-image-musikgenre">
+                    <h3 class="text-white p-3">Musik Genre</h3>
+                    <a class="btn btn-orange" asp-page="/FactsPages/MusikGenre">Go To</a>
+                </div>
+            </div>
+            <div class="col-4 mb-4">
+                <div class="fact-col bg-image bg-image-politik">
+                    <h3 class="text-white p-3">Politik</h3>
+                    <a class="btn btn-orange" asp-page="/FactsPages/Politik">Go To</a>
+                </div>
+            </div>
         </div>
     </div>
 </div>

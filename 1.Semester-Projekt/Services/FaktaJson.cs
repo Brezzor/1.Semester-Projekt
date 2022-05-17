@@ -9,43 +9,41 @@ using _1.Semester_Projekt.Helpers;
 namespace _1.Semester_Projekt.Services
 {
     public class FaktaJson : IFaktaRepository
-    {
-        string JsonFileName = "./Data/jsonFakta.json";
-
-        public Dictionary<int, Fakta> GetAllFakta()
+    {        
+        public Dictionary<int, Fakta> GetAllFakta(string JsonFileName)
         {
             return JsonFileReader.ReadJson(JsonFileName);
         }
 
-        public void CreateFakta(Fakta fakta)
+        public void CreateFakta(Fakta fakta, string JsonFileName)
         {
-            Dictionary<int, Fakta> faktas = GetAllFakta();
+            Dictionary<int, Fakta> faktas = GetAllFakta(JsonFileName);
             faktas.Add(fakta.Id, fakta);
 
             JsonFileWritter.WriteToJson(faktas, JsonFileName);
         }
 
-        public Fakta ReadFakta(int id)
+        public Fakta ReadFakta(int Id, string JsonFileName)
         {
-            Dictionary<int, Fakta> faktas = GetAllFakta();
-            return faktas[id];
+            Dictionary<int, Fakta> faktas = GetAllFakta(JsonFileName);
+            return faktas[Id];
         }
 
-        public void UpdateFakta(Fakta fakta)
+        public void UpdateFakta(Fakta fakta, string JsonFileName)
         {
-            Dictionary<int, Fakta> faktas = GetAllFakta();
+            Dictionary<int, Fakta> faktas = GetAllFakta(JsonFileName);
             foreach (var f in faktas.Values)
             {
                 if (f.Id == fakta.Id)
                 {
-                    f.Emne = fakta.Emne;
+                    faktas[fakta.Id] = fakta;
                 }
                 JsonFileWritter.WriteToJson(faktas, JsonFileName);
             }
         }
-        public void DeleteFakta(Fakta fakta)
+        public void DeleteFakta(Fakta fakta, string JsonFileName)
         {
-            Dictionary<int, Fakta> faktas = GetAllFakta();
+            Dictionary<int, Fakta> faktas = GetAllFakta(JsonFileName);
             foreach (var f in faktas.Values)
             {
                 if (f.Id == fakta.Id)

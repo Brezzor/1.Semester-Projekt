@@ -11,18 +11,8 @@ namespace _1.Semester_Projekt
 {
     public class FactsPageModel : PageModel
     {
-        private IFaktaRepository catalog;
-        public FactsPageModel(IFaktaRepository repository)
-        {
-            catalog = repository;
-        }
-        public Dictionary<int, Fakta> Faktas { get; private set; }
-
-        public string PageName { get; set; }
-
         public IActionResult OnGet()
-        {            
-            Faktas = catalog.GetAllFakta();
+        {  
             return Page();
         }
     }

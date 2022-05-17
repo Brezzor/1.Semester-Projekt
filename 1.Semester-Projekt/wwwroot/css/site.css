@@ -28,7 +28,55 @@ a.navbar-brand {
   word-break: break-all;
 }
 
+.fact-col {
+    height: 15rem;
+    border-radius: 1rem;
+}
+
+.bg-image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;    
+}
+
+.bg-image-afspillere {    
+    background-image: url(../images/headbang.jpg);    
+}
+
+.bg-image-dans {
+    background-image: url(../images/headbang.jpg);
+}
+
+.bg-image-fans {
+    background-image: url(../images/headbang.jpg);
+}
+
+.bg-image-instrumenter {
+    background-image: url(../images/headbang.jpg);
+}
+
+.bg-image-kultur {
+    background-image: url(../images/headbang.jpg);
+}
+
+.bg-image-lyd {
+    background-image: url(../images/headbang.jpg);
+}
+
+.bg-image-lys {
+    background-image: url(../images/headbang.jpg);
+}
+
+.bg-image-musikgenre {
+    background-image: url(../images/headbang.jpg);
+}
+
+.bg-image-politik {
+    background-image: url(../images/headbang.jpg);
+}
+
 /* Provide sufficient contrast against white background */
+
 a {
   color: #0366d6;
 }

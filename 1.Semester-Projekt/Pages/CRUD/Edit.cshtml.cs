@@ -21,12 +21,7 @@ namespace _1.Semester_Projekt.Pages
         public Dictionary<int, Fakta> Faktas { get; private set; }
 
         public IActionResult OnGet()
-        {
-            Faktas = catalog.GetAllFakta();
-            if (true)
-            {
-                Faktas = catalog.GetAllFakta();
-            }
+        {            
             return Page();
         }
 

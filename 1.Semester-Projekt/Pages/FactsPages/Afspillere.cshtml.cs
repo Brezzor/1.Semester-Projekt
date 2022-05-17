@@ -11,19 +11,20 @@ namespace _1.Semester_Projekt.Pages
 {
     public class AfspillereModel : PageModel
     {
-        [BindProperty]
-        public Fakta Fakta { get; set; }
+        private const string FilePath = "./Data/AfspillereFakta.json";
 
-        private IFaktaRepository catalog;
+        public IFaktaRepository repo;
 
-        public AfspillereModel(IFaktaRepository repository)
+        public AfspillereModel(IFaktaRepository faktaRepository)
         {
-            catalog = repository;
+            repo = faktaRepository;
         }
 
-        public IActionResult OnGet(int id)
+        public Dictionary<int, Fakta> Faktas { get; private set; }
+
+        public IActionResult OnGet()
         {
-            Fakta = catalog.ReadFakta(id);
+            Faktas = repo.GetAllFakta(FilePath);
             return Page();
         }
     }

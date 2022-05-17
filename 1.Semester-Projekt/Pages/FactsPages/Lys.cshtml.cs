@@ -11,19 +11,8 @@ namespace _1.Semester_Projekt.Pages
 {
     public class LysModel : PageModel
     {
-        [BindProperty]
-        public Fakta Fakta { get; set; }
-
-        private IFaktaRepository catalog;
-
-        public LysModel(IFaktaRepository repository)
+        public IActionResult OnGet()
         {
-            catalog = repository;
-        }
-
-        public IActionResult OnGet(int id)
-        {
-            Fakta = catalog.ReadFakta(id);
             return Page();
         }
     }
