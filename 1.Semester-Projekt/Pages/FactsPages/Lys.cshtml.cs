@@ -11,8 +11,20 @@ namespace _1.Semester_Projekt.Pages
 {
     public class LysModel : PageModel
     {
+        private const string FilePath = "./Data/LysFakta.json";
+
+        public IFaktaRepository repo;
+
+        public LysModel(IFaktaRepository faktaRepository)
+        {
+            repo = faktaRepository;
+        }
+
+        public Dictionary<int, Fakta> Faktas { get; private set; }
+
         public IActionResult OnGet()
         {
+            Faktas = repo.GetAllFakta(FilePath);
             return Page();
         }
     }

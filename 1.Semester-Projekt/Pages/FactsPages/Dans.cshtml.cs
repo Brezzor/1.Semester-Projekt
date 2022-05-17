@@ -11,8 +11,20 @@ namespace _1.Semester_Projekt.Pages
 {
     public class DansModel : PageModel
     {
+        private const string FilePath = "./Data/DansFakta.json";
+
+        public IFaktaRepository repo;
+
+        public DansModel(IFaktaRepository faktaRepository)
+        {
+            repo = faktaRepository;
+        }
+
+        public Dictionary<int, Fakta> Faktas { get; private set; }
+
         public IActionResult OnGet()
         {
+            Faktas = repo.GetAllFakta(FilePath);
             return Page();
         }
     }

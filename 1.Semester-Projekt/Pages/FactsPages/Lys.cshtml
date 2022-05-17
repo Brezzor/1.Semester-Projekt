@@ -1,9 +1,13 @@
 ﻿@page
 @model LysModel
 @{
-    ViewData["Title"] = "";
+    ViewData["Title"] = "Lys";
 }
 <div class="text-center">
-    <h1></h1>
-    <p></p>
+    <h1>@ViewData["Title"]</h1>
+    @foreach (var fakta in Model.Faktas)
+    {
+        <p>@fakta.Value.EmneTekst</p>
+        <hr />
+    }
 </div>

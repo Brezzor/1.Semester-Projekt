@@ -1,9 +1,13 @@
 ﻿@page
 @model InstrumenterModel
 @{
-    ViewData["Title"] = "";
+    ViewData["Title"] = "Instrumenter";
 }
 <div class="text-center">
-    <h1></h1>
-    <p></p>
+    <h1>@ViewData["Title"]</h1>
+    @foreach (var fakta in Model.Faktas)
+    {
+        <p>@fakta.Value.EmneTekst</p>
+        <hr />
+    }
 </div>

@@ -11,8 +11,20 @@ namespace _1.Semester_Projekt.Pages
 {
     public class FansModel : PageModel
     {
+        private const string FilePath = "./Data/FansFakta.json";
+
+        public IFaktaRepository repo;
+
+        public FansModel(IFaktaRepository faktaRepository)
+        {
+            repo = faktaRepository;
+        }
+
+        public Dictionary<int, Fakta> Faktas { get; private set; }
+
         public IActionResult OnGet()
         {
+            Faktas = repo.GetAllFakta(FilePath);
             return Page();
         }
     }
