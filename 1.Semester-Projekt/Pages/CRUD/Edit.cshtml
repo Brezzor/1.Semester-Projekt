@@ -9,6 +9,17 @@
 </div>
 
 <a class="btn btn-orange mb-4 mt-4" asp-page="CreateFacts">Create new fact</a>
+<a class="btn btn-orange mb-4 mt-4" href="#afspillere">Afspillere</a>
+<a class="btn btn-orange mb-4 mt-4" href="#dans">Dans</a>
+<a class="btn btn-orange mb-4 mt-4" href="#fans">Fans</a>
+<a class="btn btn-orange mb-4 mt-4" href="#instrumenter">Instrumenter</a>
+<a class="btn btn-orange mb-4 mt-4" href="#kultur">Kultur</a>
+<a class="btn btn-orange mb-4 mt-4" href="#lyd">Lyd</a>
+<a class="btn btn-orange mb-4 mt-4" href="#lys">Lys</a>
+<a class="btn btn-orange mb-4 mt-4" href="#musik-genre">Musik Genre</a>
+<a class="btn btn-orange mb-4 mt-4" href="#politik">Politik</a>
+
+<h2 id="afspillere">Afspillere</h2>
 
 <table class="table table-bordered table-black">
     <thead>
@@ -25,25 +36,302 @@
         </tr>
     </thead>
     <tbody>
-        @*@foreach (var item in Model.Faktas)
-        {            
+        @foreach (var fact in Model.AfspillereFaktas)
+        {
+            <tr>
+                <td>
+                    @fact.Value.Id
+                </td>
+                <td>
+                    @fact.Value.EmneTekst
+                </td>
+                <td>
+                    <a class="btn btn-orange" asp-page="EditFact">Edit</a>
+                </td>
+                <td>
+                    <a class="btn btn-orange" asp-route-id="@fact.Key" asp-page="DeleteFact">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<h2 id="dans">Dans</h2>
+<table class="table table-bordered table-black">
+    <thead>
         <tr>
-            <td>
-                @item.Value.Id
-            </td>
-            <td>
-                @item.Value.Emne
-            </td>
-            <td>
-                @item.Value.EmneTekst
-            </td>
-            <td>
-                <a class="btn btn-orange" asp-route-id="@item.Key" asp-page="EditFact">Edit</a>                
-            </td>
-            <td>
-                <a class="btn btn-orange" asp-route-id="@item.Key" asp-page="DeleteFact">Delete</a>
-            </td>
+            <th>
+                ID
+            </th>
+            <th>
+                Emne
+            </th>
+            <th>
+                EmneTekst
+            </th>
         </tr>
-        }*@
+    </thead>
+    <tbody>
+        @foreach (var fact in Model.DansFaktas)
+        {
+            <tr>
+                <td>
+                    @fact.Value.Id
+                </td>
+                <td>
+                    @fact.Value.EmneTekst
+                </td>
+                <td>
+                    <a class="btn btn-orange" asp-route-id="@fact.Key" asp-page="EditFact">Edit</a>
+                </td>
+                <td>
+                    <a class="btn btn-orange" asp-route-id="@fact.Key" asp-page="DeleteFact">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<h2 id="fans">Fans</h2>
+<table class="table table-bordered table-black">
+    <thead>
+        <tr>
+            <th>
+                ID
+            </th>
+            <th>
+                Emne
+            </th>
+            <th>
+                EmneTekst
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var fact in Model.FansFaktas)
+        {
+            <tr>
+                <td>
+                    @fact.Value.Id
+                </td>
+                <td>
+                    @fact.Value.EmneTekst
+                </td>
+                <td>
+                    <a class="btn btn-orange" asp-route-id="@fact.Key" asp-page="EditFact">Edit</a>
+                </td>
+                <td>
+                    <a class="btn btn-orange" asp-route-id="@fact.Key" asp-page="DeleteFact">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<h2 id="instrumenter">Instrumenter</h2>
+<table class="table table-bordered table-black">
+    <thead>
+        <tr>
+            <th>
+                ID
+            </th>
+            <th>
+                Emne
+            </th>
+            <th>
+                EmneTekst
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var fact in Model.InstrumenterFaktas)
+        {
+            <tr>
+                <td>
+                    @fact.Value.Id
+                </td>
+                <td>
+                    @fact.Value.EmneTekst
+                </td>
+                <td>
+                    <a class="btn btn-orange" asp-route-id="@fact.Key" asp-page="EditFact">Edit</a>
+                </td>
+                <td>
+                    <a class="btn btn-orange" asp-route-id="@fact.Key" asp-page="DeleteFact">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<h2 id="kultur">Kultur</h2>
+<table class="table table-bordered table-black">
+    <thead>
+        <tr>
+            <th>
+                ID
+            </th>
+            <th>
+                Emne
+            </th>
+            <th>
+                EmneTekst
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var fact in Model.KulturFaktas)
+        {
+            <tr>
+                <td>
+                    @fact.Value.Id
+                </td>
+                <td>
+                    @fact.Value.EmneTekst
+                </td>
+                <td>
+                    <a class="btn btn-orange" asp-route-id="@fact.Key" asp-page="EditFact">Edit</a>
+                </td>
+                <td>
+                    <a class="btn btn-orange" asp-route-id="@fact.Key" asp-page="DeleteFact">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<h2 id="lyd">Lyd</h2>
+<table class="table table-bordered table-black">
+    <thead>
+        <tr>
+            <th>
+                ID
+            </th>
+            <th>
+                Emne
+            </th>
+            <th>
+                EmneTekst
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var fact in Model.LydFaktas)
+        {
+            <tr>
+                <td>
+                    @fact.Value.Id
+                </td>
+                <td>
+                    @fact.Value.EmneTekst
+                </td>
+                <td>
+                    <a class="btn btn-orange" asp-route-id="@fact.Key" asp-page="EditFact">Edit</a>
+                </td>
+                <td>
+                    <a class="btn btn-orange" asp-route-id="@fact.Key" asp-page="DeleteFact">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<h2 id="lys">Lys</h2>
+<table class="table table-bordered table-black">
+    <thead>
+        <tr>
+            <th>
+                ID
+            </th>
+            <th>
+                Emne
+            </th>
+            <th>
+                EmneTekst
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var fact in Model.LysFaktas)
+        {
+            <tr>
+                <td>
+                    @fact.Value.Id
+                </td>
+                <td>
+                    @fact.Value.EmneTekst
+                </td>
+                <td>
+                    <a class="btn btn-orange" asp-route-id="@fact.Key" asp-page="EditFact">Edit</a>
+                </td>
+                <td>
+                    <a class="btn btn-orange" asp-route-id="@fact.Key" asp-page="DeleteFact">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<h2 id="musik-genre">Musik Genre</h2>
+<table class="table table-bordered table-black">
+    <thead>
+        <tr>
+            <th>
+                ID
+            </th>
+            <th>
+                Emne
+            </th>
+            <th>
+                EmneTekst
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var fact in Model.MusikGenreFaktas)
+        {
+            <tr>
+                <td>
+                    @fact.Value.Id
+                </td>
+                <td>
+                    @fact.Value.EmneTekst
+                </td>
+                <td>
+                    <a class="btn btn-orange" asp-route-id="@fact.Key" asp-page="EditFact">Edit</a>
+                </td>
+                <td>
+                    <a class="btn btn-orange" asp-route-id="@fact.Key" asp-page="DeleteFact">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<h2 id="politik">Politik</h2>
+<table class="table table-bordered table-black">
+    <thead>
+        <tr>
+            <th>
+                ID
+            </th>
+            <th>
+                Emne
+            </th>
+            <th>
+                EmneTekst
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var fact in Model.PolitikFaktas)
+        {
+            <tr>
+                <td>
+                    @fact.Value.Id
+                </td>
+                <td>
+                    @fact.Value.EmneTekst
+                </td>
+                <td>
+                    <a class="btn btn-orange" asp-route-id="@fact.Key" asp-page="EditFact">Edit</a>
+                </td>
+                <td>
+                    <a class="btn btn-orange" asp-route-id="@fact.Key" asp-page="DeleteFact">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
