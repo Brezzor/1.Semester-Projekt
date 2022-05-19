@@ -18,42 +18,50 @@ namespace _1.Semester_Projekt.Services
         public void CreateFakta(Fakta fakta, string JsonFileName)
         {
             Dictionary<int, Fakta> faktas = GetAllFakta(JsonFileName);
-            faktas.Add(fakta.Id, fakta);
+            if (fakta != null || !faktas.ContainsKey(fakta.Id))
+            {
+                faktas.Add(fakta.Id, fakta);
+                JsonFileWritter.WriteToJson(faktas, JsonFileName);
 
-            JsonFileWritter.WriteToJson(faktas, JsonFileName);
+            }
         }
 
         public Fakta ReadFakta(int Id, string JsonFileName)
         {
             Dictionary<int, Fakta> faktas = GetAllFakta(JsonFileName);
-            return faktas[Id];
+            if (!faktas.ContainsKey(Id))
+            {
+                return null;
+            }
+            else
+            {
+                return faktas[Id];
+
+            }
         }
 
         public void UpdateFakta(Fakta fakta, string JsonFileName)
         {
             Dictionary<int, Fakta> faktas = GetAllFakta(JsonFileName);
-            foreach (var f in faktas.Values)
+
+            if (fakta != null || !faktas.ContainsKey(fakta.Id))
             {
-                if (f.Id == fakta.Id)
-                {
-                    faktas[fakta.Id] = fakta;
-                }
+                faktas[fakta.Id] = fakta;
                 JsonFileWritter.WriteToJson(faktas, JsonFileName);
             }
+
         }
+
         public void DeleteFakta(Fakta fakta, string JsonFileName)
         {
-            Dictionary<int, Fakta> faktas = GetAllFakta(JsonFileName);
-            foreach (var f in faktas.Values)
+
+            if (fakta != null)
             {
-                if (f.Id == fakta.Id)
-                {
-                    faktas.Remove(f.Id);
-                }
+                Dictionary<int, Fakta> faktas = GetAllFakta(JsonFileName);
+                faktas.Remove(fakta.Id);
+                JsonFileWritter.WriteToJson(faktas, JsonFileName);
             }
-            JsonFileWritter.WriteToJson(faktas, JsonFileName);
+
         }
-
-
     }
 }

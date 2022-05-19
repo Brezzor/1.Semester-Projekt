@@ -27,19 +27,16 @@ namespace _1.Semester_Projekt.Pages
         {
             repo = repository;
         }
-
-        public Dictionary<int, Fakta> AfspillereFaktas { get; private set; }
-        public Dictionary<int, Fakta> DansFaktas { get; private set; }
-
-        public Dictionary<int, Fakta> FansFaktas { get; private set; }
-
-        public Dictionary<int, Fakta> InstrumenterFaktas { get; private set; }
-
-        public Dictionary<int, Fakta> KulturFaktas { get; private set; }
-        public Dictionary<int, Fakta> LydFaktas { get; private set; }
-        public Dictionary<int, Fakta> LysFaktas { get; private set; }
-        public Dictionary<int, Fakta> MusikGenreFaktas { get; private set; }
-        public Dictionary<int, Fakta> PolitikFaktas { get; private set; }
+        
+        public Dictionary<int, Fakta> AfspillereFaktas { get; set; }
+        public Dictionary<int, Fakta> DansFaktas { get; set; }
+        public Dictionary<int, Fakta> FansFaktas { get; set; }
+        public Dictionary<int, Fakta> InstrumenterFaktas { get; set; }
+        public Dictionary<int, Fakta> KulturFaktas { get; set; }
+        public Dictionary<int, Fakta> LydFaktas { get; set; }
+        public Dictionary<int, Fakta> LysFaktas { get; set; }
+        public Dictionary<int, Fakta> MusikGenreFaktas { get; set; }
+        public Dictionary<int, Fakta> PolitikFaktas { get; set; }
 
         public IActionResult OnGet()
         {
