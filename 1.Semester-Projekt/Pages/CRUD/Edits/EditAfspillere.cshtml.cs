@@ -9,21 +9,28 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace _1.Semester_Projekt.Pages
 {
-    public class EditFactModel : PageModel
+    public class EditAfspillereModel : PageModel
     {
-        public Fakta Fact { get; set; }
-        private IFaktaRepository catalog;
-        public EditFactModel (IFaktaRepository repository)
+        private const string AfspillerePath = "./Data/AfspillereFakta.json";
+
+        [BindProperty]
+        public Fakta Afspillere { get; set; }
+
+        private IFaktaRepository repo;
+        
+        public EditAfspillereModel (IFaktaRepository repository)
         {
-            catalog = repository;
+            repo = repository;
         }
 
         public void OnGet(int id) 
         {
+            Afspillere = repo.ReadFakta(id, AfspillerePath);
         }
 
         public IActionResult OnPost()
         {
+            repo.UpdateFakta(Afspillere, AfspillerePath);
             return RedirectToPage("Edit");
         }
     }
