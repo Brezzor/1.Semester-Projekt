@@ -31,7 +31,7 @@ namespace _1.Semester_Projekt.Pages.CRUD
         public IActionResult OnPost()
         {
             repo.UpdateFakta(Fact, PolitikPath);
-            return RedirectToPage("Edit");
+            return RedirectToPage("/CRUD/Edit");
         }
     }
 }

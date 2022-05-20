@@ -31,7 +31,7 @@ namespace _1.Semester_Projekt.Pages
         public IActionResult OnPost()
         {
             repo.UpdateFakta(Fact, InstrumenterPath);
-            return RedirectToPage("Edit");
+            return RedirectToPage("/CRUD/Edit");
         }
     }
 }
