@@ -31,7 +31,7 @@ namespace _1.Semester_Projekt.Pages.CRUD
         public IActionResult OnPost()
         {
             repo.UpdateFakta(Fact, LysPath);
-            return RedirectToPage("Edit");
+            return RedirectToPage("/CRUD/Edit");
         }
     }
 }
