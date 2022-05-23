@@ -9,7 +9,44 @@ using _1.Semester_Projekt.Helpers;
 namespace _1.Semester_Projekt.Services
 {
     public class FaktaJson : IFaktaRepository
-    {        
+    {
+        private const string AfspillerePath = "./Data/AfspillereFakta.json";
+        private const string DansPath = "./Data/DansFakta.json";
+        private const string FansPath = "./Data/FansFakta.json";
+        private const string InstrumenterPath = "./Data/InstrumenterFakta.json";
+        private const string KulturPath = "./Data/KulturFakta.json";
+        private const string LydPath = "./Data/LydFakta.json";
+        private const string LysPath = "./Data/LysFakta.json";
+        private const string MusikGenrePath = "./Data/MusikGenreFakta.json";
+        private const string PolitikPath = "./Data/PolitikFakta.json";
+
+        public string EmnePath(int num)
+        {
+            switch (num)
+            {
+                case ((int)Emner.Afspillere):
+                    return AfspillerePath;
+                case ((int)Emner.Dans):
+                    return DansPath;
+                case ((int)Emner.Fans):
+                    return FansPath;
+                case ((int)Emner.Instrumenter):
+                    return InstrumenterPath;
+                case ((int)Emner.Kultur):
+                    return KulturPath;
+                case ((int)Emner.Lyd):
+                    return LydPath;
+                case ((int)Emner.Lys):
+                    return LysPath;
+                case ((int)Emner.MusikGenre):
+                    return MusikGenrePath;
+                case ((int)Emner.Politik):
+                    return PolitikPath;
+                default:
+                    return "";
+            }
+        }
+
         public Dictionary<int, Fakta> GetAllFakta(string JsonFileName)
         {
             return JsonFileReader.ReadJson(JsonFileName);
@@ -29,6 +66,7 @@ namespace _1.Semester_Projekt.Services
         public Fakta ReadFakta(int Id, string JsonFileName)
         {
             Dictionary<int, Fakta> faktas = GetAllFakta(JsonFileName);
+
             if (!faktas.ContainsKey(Id))
             {
                 return null;

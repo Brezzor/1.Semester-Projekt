@@ -11,9 +11,7 @@ using _1.Semester_Projekt.Helpers;
 namespace _1.Semester_Projekt.Pages
 {
     public class CreateModel : PageModel
-    {
-        private const string AfspillerePath = "./Data/AfspillereFakta.json";
-
+    {      
         [BindProperty]
         public Fakta Fakta { get; set; }
 
@@ -30,20 +28,8 @@ namespace _1.Semester_Projekt.Pages
         }
         public IActionResult OnPost()
         {
-
-            catalog.CreateFakta(Fakta, EmnePath(((int)Fakta.Emne)));
-            return RedirectToPage("/Index");
-        }
-
-        private string EmnePath(int num)
-        {
-            switch (num)
-            {
-                case 100:
-                    return AfspillerePath;
-                default:
-                    return "";
-            }
-        }
+            catalog.CreateFakta(Fakta, catalog.EmnePath(((int)Fakta.Emne)));
+            return RedirectToPage("/CRUD/Edit");
+        }        
     }
 }

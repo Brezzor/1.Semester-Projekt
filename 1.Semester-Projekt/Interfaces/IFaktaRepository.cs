@@ -14,5 +14,6 @@ namespace _1.Semester_Projekt.Interfaces
         Fakta ReadFakta(int Id, string JsonFileName);
         void UpdateFakta(Fakta fakta, string JsonFileName);
         void DeleteFakta(Fakta fakta, string JsonFileName);
+        string EmnePath(int emne);
     }
 }
