@@ -1,5 +1,6 @@
 ﻿@page
 @model _1.Semester_Projekt.Pages.CreateModel
+@using _1.Semester_Projekt.Models
 @{
     ViewData["Title"] = "Create Facts Page";
 }
@@ -13,11 +14,17 @@
 
     <div class="form-group">
         <label asp-for="@Model.Fakta.Id" class="control-label"> Id</label>
-        <input asp-for="@Model.Fakta.Id" class="form-control" type="number"/>
-    </div>    
+        <input asp-for="@Model.Fakta.Id" class="form-control" type="number" />
+    </div>
+    
+    <div class="form-group">
+        <label asp-for="@Model.Fakta.Emne" class="control-label">Emne</label>
+        <select asp-for="@Model.Fakta.Emne" class="form-control" asp-items="Html.GetEnumSelectList<Emner>()"><option>Vælg Emne</option></select>
+    </div>
+
     <div class="form-group">
         <label asp-for="@Model.Fakta.EmneTekst" class="control-label"> Emne teskt</label>
-        <input asp-for="@Model.Fakta.EmneTekst" class="form-control" type="text"/>
+        <input asp-for="@Model.Fakta.EmneTekst" class="form-control" type="text" />
     </div>
     <div class="form-group">
         <input type="submit" value="Create" class="btn btn-primary" />

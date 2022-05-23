@@ -12,10 +12,13 @@ namespace _1.Semester_Projekt.Pages
 {
     public class CreateModel : PageModel
     {
+        private const string AfspillerePath = "./Data/AfspillereFakta.json";
+
         [BindProperty]
         public Fakta Fakta { get; set; }
 
         private IFaktaRepository catalog;
+
         public CreateModel(IFaktaRepository repository)
         {
             catalog = repository;
@@ -27,7 +30,20 @@ namespace _1.Semester_Projekt.Pages
         }
         public IActionResult OnPost()
         {
+
+            catalog.CreateFakta(Fakta, EmnePath(((int)Fakta.Emne)));
             return RedirectToPage("/Index");
+        }
+
+        private string EmnePath(int num)
+        {
+            switch (num)
+            {
+                case 100:
+                    return AfspillerePath;
+                default:
+                    return "";
+            }
         }
     }
 }
