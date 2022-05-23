@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="@Url.Content("~/css/site.css")" type="text/css"/>
     <link rel="icon" href="~/images/favicon/favicon.ico" type="image/x-icon"/>
 </head>
-<body>
+<body class=" @ViewData["BackgroundClass"]">
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-black border-bottom box-shadow mb-3">
             <div class="container">
@@ -38,8 +38,8 @@
             </div>
         </nav>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
+    <div class="container-fluid m-2">
+        <main role="main">
             @RenderBody()
         </main>
     </div>

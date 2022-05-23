@@ -33,6 +33,10 @@ a.navbar-brand {
     border-radius: 1rem;
 }
 
+.bg-image-main {    
+    background-image: url(../images/RockMuseumRoskilde.jpg);
+}
+
 .bg-image {
     background-repeat: no-repeat;
     background-size: cover;
@@ -129,7 +133,7 @@ html {
 
 body {
   /* Margin bottom by footer height */
-  margin-bottom: 60px;
+  margin-bottom: 60px;  
 }
 
 .footer {
