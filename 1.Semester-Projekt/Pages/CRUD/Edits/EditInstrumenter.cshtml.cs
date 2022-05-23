@@ -7,31 +7,31 @@ using _1.Semester_Projekt.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace _1.Semester_Projekt.Pages.CRUD
+namespace _1.Semester_Projekt.Pages
 {
-    public class EditFansModel : PageModel
+    public class EditInstrumenterModel : PageModel
     {
-        private const string FansPath = "./Data/FansFakta.json";
+        private const string InstrumenterPath = "./Data/InstrumenterFakta.json";
 
         [BindProperty]
         public Fakta Fact { get; set; }
 
         private IFaktaRepository repo;
 
-        public EditFansModel(IFaktaRepository repository)
+        public EditInstrumenterModel(IFaktaRepository repository)
         {
             repo = repository;
         }
 
         public void OnGet(int id)
         {
-            Fact = repo.ReadFakta(id, FansPath);
+            Fact = repo.ReadFakta(id, InstrumenterPath);
         }
 
         public IActionResult OnPost()
         {
-            repo.UpdateFakta(Fact, FansPath);
-            return RedirectToPage("Edit");
+            repo.UpdateFakta(Fact, InstrumenterPath);
+            return RedirectToPage("/CRUD/Edit");
         }
     }
 }

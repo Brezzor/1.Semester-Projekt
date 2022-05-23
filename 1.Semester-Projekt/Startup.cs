@@ -10,6 +10,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Newtonsoft.Json.Converters;
 
 namespace _1.Semester_Projekt
 {
@@ -26,7 +27,7 @@ namespace _1.Semester_Projekt
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
-            services.AddTransient<IFaktaRepository, FaktaJson>();
+            services.AddTransient<IFaktaRepository, FaktaJson>();            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

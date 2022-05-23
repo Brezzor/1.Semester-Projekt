@@ -9,29 +9,29 @@ using _1.Semester_Projekt.Models;
 
 namespace _1.Semester_Projekt.Pages.CRUD
 {
-    public class EditKulturModel : PageModel
+    public class EditMusikGenreModel : PageModel
     {
-        private const string KulturPath = "./Data/KulturFakta.json";
+        private const string MusikGenrePath = "./Data/MusikGenreFakta.json";
 
         [BindProperty]
         public Fakta Fact { get; set; }
 
         private IFaktaRepository repo;
 
-        public EditKulturModel(IFaktaRepository repository)
+        public EditMusikGenreModel(IFaktaRepository repository)
         {
             repo = repository;
         }
 
         public void OnGet(int id)
         {
-            Fact = repo.ReadFakta(id, KulturPath);
+            Fact = repo.ReadFakta(id, MusikGenrePath);
         }
 
         public IActionResult OnPost()
         {
-            repo.UpdateFakta(Fact, KulturPath );
-            return RedirectToPage("Edit");
+            repo.UpdateFakta(Fact, MusikGenrePath );
+            return RedirectToPage("/CRUD/Edit");
         }
     }
 }

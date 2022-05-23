@@ -2,36 +2,36 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
 using _1.Semester_Projekt.Interfaces;
 using _1.Semester_Projekt.Models;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace _1.Semester_Projekt.Pages.CRUD
 {
-    public class EditPolitikModel : PageModel
+    public class EditDansModel : PageModel
     {
-        private const string PolitikPath = "./Data/PolitikFakta.json";
+        private const string DansPath = "./Data/DansFakta.json";
 
         [BindProperty]
-        public Fakta Fact { get; set; }
+        public Fakta Dans { get; set; }
 
         private IFaktaRepository repo;
 
-        public EditPolitikModel(IFaktaRepository repository)
+        public EditDansModel(IFaktaRepository repository)
         {
             repo = repository;
         }
 
         public void OnGet(int id)
         {
-            Fact = repo.ReadFakta(id, PolitikPath);
+            Dans = repo.ReadFakta(id, DansPath);
         }
 
         public IActionResult OnPost()
         {
-            repo.UpdateFakta(Fact, PolitikPath);
-            return RedirectToPage("Edit");
+            repo.UpdateFakta(Dans, DansPath);
+            return RedirectToPage("/CRUD/Edit");
         }
     }
 }

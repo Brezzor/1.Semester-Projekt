@@ -7,31 +7,30 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using _1.Semester_Projekt.Interfaces;
 using _1.Semester_Projekt.Models;
 
-namespace _1.Semester_Projekt.Pages.CRUD
+namespace _1.Semester_Projekt.Pages.CRUD.Deleted
 {
-    public class EditMusikGenreModel : PageModel
+    public class DeletePolitikModel : PageModel
     {
-        private const string MusikGenrePath = "./Data/MusikGenreFakta.json";
+        private const string PolitikPath = "./Data/PolitikFakta.json";
 
         [BindProperty]
         public Fakta Fact { get; set; }
 
         private IFaktaRepository repo;
 
-        public EditMusikGenreModel(IFaktaRepository repository)
+        public DeletePolitikModel(IFaktaRepository repository)
         {
             repo = repository;
         }
-
         public void OnGet(int id)
         {
-            Fact = repo.ReadFakta(id, MusikGenrePath);
+            Fact = repo.ReadFakta(id, PolitikPath);
         }
 
         public IActionResult OnPost()
         {
-            repo.UpdateFakta(Fact, MusikGenrePath );
-            return RedirectToPage("Edit");
+            repo.DeleteFakta(Fact, PolitikPath);
+            return RedirectToPage("/CRUD/Edit");
         }
     }
 }

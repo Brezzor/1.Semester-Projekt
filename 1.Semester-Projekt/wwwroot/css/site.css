@@ -43,8 +43,8 @@ a.navbar-brand {
     background-position: center;    
 }
 
-.bg-image-afspillere {    
-    background-image: url(../images/headbang.jpg);    
+.bg-image-afspillere {
+    background-image: url(../images/Pladeafspiller.jpeg);
 }
 
 .bg-image-dans {
@@ -52,31 +52,31 @@ a.navbar-brand {
 }
 
 .bg-image-fans {
-    background-image: url(../images/headbang.jpg);
+    background-image: url(../images/fans.jpg);
 }
 
 .bg-image-instrumenter {
-    background-image: url(../images/headbang.jpg);
+    background-image: url(../images/InstrumenterGuitar.jfif);
 }
 
 .bg-image-kultur {
-    background-image: url(../images/headbang.jpg);
+    background-image: url(../images/Ungdosmkultur.jpg);
 }
 
 .bg-image-lyd {
-    background-image: url(../images/headbang.jpg);
+    background-image: url(../images/Lyd.jfif);
 }
 
 .bg-image-lys {
-    background-image: url(../images/headbang.jpg);
+    background-image: url(../images/Lys.jfif);
 }
 
 .bg-image-musikgenre {
-    background-image: url(../images/headbang.jpg);
+    background-image: url(../images/GenreMusik.jfif);
 }
 
 .bg-image-politik {
-    background-image: url(../images/headbang.jpg);
+    background-image: url(../images/ParalamentPolitik.jpg);
 }
 
 /* Provide sufficient contrast against white background */
