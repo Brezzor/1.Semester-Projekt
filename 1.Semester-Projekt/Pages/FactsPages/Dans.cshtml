@@ -5,9 +5,11 @@
 }
 <div class="text-center">
     <h1>@ViewData["Title"]</h1>
+    <hr />
     @foreach (var fakta in Model.Faktas)
     {
         <p>@fakta.Value.EmneTekst</p>
         <hr />
     }
+    <audio controls src="~/sounds/Rick-Ashley.mp3"></audio>
 </div>
