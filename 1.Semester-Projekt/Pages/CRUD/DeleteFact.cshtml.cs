@@ -7,29 +7,29 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using _1.Semester_Projekt.Interfaces;
 using _1.Semester_Projekt.Models;
 
-namespace _1.Semester_Projekt.Pages.CRUD.Deleted
+namespace _1.Semester_Projekt.Pages
 {
-    public class DeletePolitikModel : PageModel
+    public class DeleteAfspillereModel : PageModel
     {
-        private const string PolitikPath = "./Data/PolitikFakta.json";
+        private const string AfspillserPath = "./Data/AfspillereFakta.json";
 
         [BindProperty]
         public Fakta Fact { get; set; }
 
         private IFaktaRepository repo;
 
-        public DeletePolitikModel(IFaktaRepository repository)
+        public DeleteAfspillereModel(IFaktaRepository repository)
         {
             repo = repository;
         }
-        public void OnGet(int id)
+        public void OnGet(int id, Emner emne)
         {
-            Fact = repo.ReadFakta(id, PolitikPath);
+            Fact = repo.ReadFakta(id, emne);
         }
 
         public IActionResult OnPost()
         {
-            repo.DeleteFakta(Fact, PolitikPath);
+            repo.DeleteFakta(Fact);
             return RedirectToPage("/CRUD/Edit");
         }
     }

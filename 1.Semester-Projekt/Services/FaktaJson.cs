@@ -20,27 +20,27 @@ namespace _1.Semester_Projekt.Services
         private const string MusikGenrePath = "./Data/MusikGenreFakta.json";
         private const string PolitikPath = "./Data/PolitikFakta.json";
 
-        public string EmnePath(int num)
+        private static string EmnePath(Emner emne)
         {
-            switch (num)
+            switch (emne)
             {
-                case ((int)Emner.Afspillere):
+                case (Emner.Afspillere):
                     return AfspillerePath;
-                case ((int)Emner.Dans):
+                case (Emner.Dans):
                     return DansPath;
-                case ((int)Emner.Fans):
+                case (Emner.Fans):
                     return FansPath;
-                case ((int)Emner.Instrumenter):
+                case (Emner.Instrumenter):
                     return InstrumenterPath;
-                case ((int)Emner.Kultur):
+                case (Emner.Kultur):
                     return KulturPath;
-                case ((int)Emner.Lyd):
+                case (Emner.Lyd):
                     return LydPath;
-                case ((int)Emner.Lys):
+                case (Emner.Lys):
                     return LysPath;
-                case ((int)Emner.MusikGenre):
+                case (Emner.MusikGenre):
                     return MusikGenrePath;
-                case ((int)Emner.Politik):
+                case (Emner.Politik):
                     return PolitikPath;
                 default:
                     return "";
@@ -52,20 +52,21 @@ namespace _1.Semester_Projekt.Services
             return JsonFileReader.ReadJson(JsonFileName);
         }
 
-        public void CreateFakta(Fakta fakta, string JsonFileName)
+        public void CreateFakta(Fakta fakta)
         {
-            Dictionary<int, Fakta> faktas = GetAllFakta(JsonFileName);
+            Dictionary<int, Fakta> faktas = GetAllFakta(EmnePath(fakta.Emne));
+
             if (fakta != null || !faktas.ContainsKey(fakta.Id))
             {
                 faktas.Add(fakta.Id, fakta);
-                JsonFileWritter.WriteToJson(faktas, JsonFileName);
+                JsonFileWritter.WriteToJson(faktas, EmnePath(fakta.Emne));
 
             }
         }
 
-        public Fakta ReadFakta(int Id, string JsonFileName)
+        public Fakta ReadFakta(int Id, Emner emne)
         {
-            Dictionary<int, Fakta> faktas = GetAllFakta(JsonFileName);
+            Dictionary<int, Fakta> faktas = GetAllFakta(EmnePath(emne));
 
             if (!faktas.ContainsKey(Id))
             {
@@ -78,26 +79,26 @@ namespace _1.Semester_Projekt.Services
             }
         }
 
-        public void UpdateFakta(Fakta fakta, string JsonFileName)
+        public void UpdateFakta(Fakta fakta)
         {
-            Dictionary<int, Fakta> faktas = GetAllFakta(JsonFileName);
+            Dictionary<int, Fakta> faktas = GetAllFakta(EmnePath(fakta.Emne));
 
             if (fakta != null || !faktas.ContainsKey(fakta.Id))
             {
                 faktas[fakta.Id] = fakta;
-                JsonFileWritter.WriteToJson(faktas, JsonFileName);
+                JsonFileWritter.WriteToJson(faktas, EmnePath(fakta.Emne));
             }
 
         }
 
-        public void DeleteFakta(Fakta fakta, string JsonFileName)
+        public void DeleteFakta(Fakta fakta)
         {
 
             if (fakta != null)
             {
-                Dictionary<int, Fakta> faktas = GetAllFakta(JsonFileName);
+                Dictionary<int, Fakta> faktas = GetAllFakta(EmnePath(fakta.Emne));
                 faktas.Remove(fakta.Id);
-                JsonFileWritter.WriteToJson(faktas, JsonFileName);
+                JsonFileWritter.WriteToJson(faktas, EmnePath(fakta.Emne));
             }
 
         }

@@ -28,7 +28,7 @@ namespace _1.Semester_Projekt.Pages
         }
         public IActionResult OnPost()
         {
-            catalog.CreateFakta(Fakta, catalog.EmnePath(((int)Fakta.Emne)));
+            catalog.CreateFakta(Fakta);
             return RedirectToPage("/CRUD/Edit");
         }        
     }

@@ -14,8 +14,7 @@
     </div>
     <div class="form-group">
         <label asp-for="@Model.Fakta.Emne" class="control-label"></label>
-        <select asp-for="@Model.Fakta.Emne" class="form-control" asp-items="Html.GetEnumSelectList<Emner>()"><option>Vælg Emne</option></select>
-        <span asp-validation-for="@Model.Fakta.Emne" class="text-danger"></span>
+        <input readonly asp-for="@Model.Fakta.Emne" class="form-control">        
     </div>
     <div class="form-group">
         <label asp-for="@Model.Fakta.EmneTekst" class="control-label"></label>

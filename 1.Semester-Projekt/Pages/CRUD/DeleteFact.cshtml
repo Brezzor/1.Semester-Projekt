@@ -1,5 +1,5 @@
-﻿@page
-@model _1.Semester_Projekt.Pages.CRUD.Deleted.DeleteLysModel
+﻿@page "{id}"
+@model _1.Semester_Projekt.Pages.DeleteAfspillereModel
 @{
 }
 
@@ -15,12 +15,19 @@
                 @Html.DisplayFor(model => model.Fact.Id)
             </dd>
             <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Fact.Emne)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Fact.Emne)
+            </dd>
+            <dt class="col-sm-2">
                 @Html.DisplayNameFor(model => model.Fact.EmneTekst)
             </dt>
             <dd class="col-sm-10">
                 @Html.DisplayFor(model => model.Fact.EmneTekst)
             </dd>
         </dl>
-        <input type="submit" value="Delete" class="btn btn-danger" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-page="Edit">Go Back</a>
     </form>
 </div>

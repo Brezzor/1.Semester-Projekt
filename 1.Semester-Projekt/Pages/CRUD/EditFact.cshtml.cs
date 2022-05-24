@@ -14,6 +14,8 @@ namespace _1.Semester_Projekt.Pages
         [BindProperty]
         public Fakta Fakta { get; set; }
 
+        private Emner Emne { get; set; }
+
         private IFaktaRepository repo;
         
         public EditFactModel(IFaktaRepository repository)
@@ -23,12 +25,13 @@ namespace _1.Semester_Projekt.Pages
 
         public void OnGet(int id, Emner emne) 
         {
-            Fakta = repo.ReadFakta(id, repo.EmnePath((int)emne));
+            Fakta = repo.ReadFakta(id, emne);
+            Emne = emne;
         }
 
         public IActionResult OnPost()
         {
-            repo.UpdateFakta(Fakta, repo.EmnePath((int)Fakta.Emne));
+            repo.UpdateFakta(Fakta);
             return RedirectToPage("/CRUD/Edit");
         }
     }

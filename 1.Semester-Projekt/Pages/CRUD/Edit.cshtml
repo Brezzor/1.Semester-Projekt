@@ -20,7 +20,7 @@
     <a class="btn btn-orange mb-4 mt-4" href="#politik">Politik</a>
 </div>
 
-<h2 class="text-light" id="afspillere">Afspillere</h2>
+<h2 class="text-light pb-2" id="afspillere">Afspillere</h2>
 
 <table class="table table-bordered table-black">
     <thead>
@@ -43,20 +43,20 @@
         @foreach (var fact in Model.AfspillereFaktas)
         {
         <tr>
-            <td>
+            <td class="col-1">
                 @fact.Value.Id
             </td>
-            <td>
+            <td class="col-1">
                 @fact.Value.Emne
             </td>
-            <td>
+            <td class="col">
                 @fact.Value.EmneTekst
             </td>
-            <td>
+            <td class="text-center col-1">
                 <a class="btn btn-orange" asp-route-id="@fact.Key" asp-route-emne="@fact.Value.Emne" asp-page="EditFact">Edit</a>
             </td>
-            <td>
-                <a class="btn btn-orange" asp-route-id="@fact.Value.Emne" asp-page="Deleted/DeleteAfspillere">Delete</a>
+            <td class="text-center col-1">
+                <a class="btn btn-orange" asp-route-id="@fact.Key" asp-route-emne="@fact.Value.Emne" asp-page="DeleteFact">Delete</a>
             </td>
         </tr>
         }
@@ -67,12 +67,12 @@
     <a href="#Top" class="text-light">Back to top</a>
 </div>
 
-<h2 class="text-light" id="dans">Dans</h2>
+<h2 class="text-light pb-2" id="dans">Dans</h2>
 
 <table class="table table-bordered table-black">
     <thead>
         <tr>
-            <th>
+            <th >
                 ID
             </th>
             <th>
@@ -87,20 +87,20 @@
         @foreach (var fact in Model.DansFaktas)
         {
         <tr>
-            <td>
+            <td class="col-1">
                 @fact.Value.Id
             </td>
-            <td>
+            <td class="col-1">
                 @fact.Value.Emne
             </td>
-            <td>
+            <td class="col">
                 @fact.Value.EmneTekst
             </td>
-            <td>
+            <td class=" text-center col-1">
                 <a class="btn btn-orange" asp-route-id="@fact.Key" asp-route-emne="@fact.Value.Emne" asp-page="EditFact">Edit</a>
             </td>
-            <td>
-                <a class="btn btn-orange" asp-route-id="@fact.Key" asp-page="Deleted/DeleteDans">Delete</a>
+            <td class="text-center col-1">
+                <a class="btn btn-orange" asp-route-id="@fact.Key" asp-route-emne="@fact.Value.Emne" asp-page="DeleteFact">Delete</a>
             </td>
         </tr>
         }
@@ -111,7 +111,7 @@
     <a href="#Top" class="text-light">Back to top</a>
 </div>
 
-<h2 class="text-light" id="fans">Fans</h2>
+<h2 class="text-light pb-2" id="fans">Fans</h2>
 
 <table class="table table-bordered table-black">
     <thead>
@@ -131,20 +131,20 @@
         @foreach (var fact in Model.FansFaktas)
         {
             <tr>
-                <td>
+                <td class="col-1">
                     @fact.Value.Id
                 </td>
-                <td>
+                <td class="col-1">
                     @fact.Value.Emne
                 </td>
-                <td>
+                <td class="col">
                     @fact.Value.EmneTekst
                 </td>
-                <td>
+                <td class="text-center col-1">
                     <a class="btn btn-orange" asp-route-id="@fact.Key" asp-route-emne="@fact.Value.Emne" asp-page="EditFact">Edit</a>
                 </td>
-                <td>
-                    <a class="btn btn-orange" asp-route-id="@fact.Key" asp-page="Deleted/DeleteFans">Delete</a>
+                <td class="text-center col-1">
+                    <a class="btn btn-orange" asp-route-id="@fact.Key" asp-route-emne="@fact.Value.Emne" asp-page="DeleteFact">Delete</a>
                 </td>
             </tr>
         }
@@ -155,7 +155,7 @@
     <a href="#Top" class="text-light">Back to top</a>
 </div>
 
-<h2 class="text-light" id="instrumenter">Instrumenter</h2>
+<h2 class="text-light pb-2" id="instrumenter">Instrumenter</h2>
 
 <table class="table table-bordered table-black">
     <thead>
@@ -175,20 +175,20 @@
         @foreach (var fact in Model.InstrumenterFaktas)
         {
         <tr>
-            <td>
+            <td class="col-1">
                 @fact.Value.Id
             </td>
-            <td>
+            <td class="col-1">
                 @fact.Value.Emne
             </td>
-            <td>
+            <td class="col">
                 @fact.Value.EmneTekst
             </td>
-            <td>
+            <td class="text-center col-1">
                 <a class="btn btn-orange" asp-route-id="@fact.Key" asp-route-emne="@fact.Value.Emne" asp-page="EditFact">Edit</a>
             </td>
-            <td>
-                <a class="btn btn-orange" asp-route-id="@fact.Key" asp-page="Deleted/DeleteInstrumenter">Delete</a>
+            <td class="text-center col-1">
+                <a class="btn btn-orange" asp-route-id="@fact.Key" asp-route-emne="@fact.Value.Emne" asp-page="DeleteFact">Delete</a>
             </td>
         </tr>
         }
@@ -199,7 +199,7 @@
     <a href="#Top" class="text-light">Back to top</a>
 </div>
 
-<h2 class="text-light" id="kultur">Kultur</h2>
+<h2 class="text-light pb-2" id="kultur">Kultur</h2>
 
 <table class="table table-bordered table-black">
     <thead>
@@ -219,20 +219,20 @@
         @foreach (var fact in Model.KulturFaktas)
         {
         <tr>
-            <td>
+            <td class="col-1">
                 @fact.Value.Id
             </td>
-            <td>
+            <td class="col-1">
                 @fact.Value.Emne
             </td>
-            <td>
+            <td class="col">
                 @fact.Value.EmneTekst
             </td>
-            <td>
+            <td class="text-center col-1">
                 <a class="btn btn-orange" asp-route-id="@fact.Key" asp-route-emne="@fact.Value.Emne" asp-page="EditFact">Edit</a>
             </td>
-            <td>
-                <a class="btn btn-orange" asp-route-id="@fact.Key" asp-page="Deleted/DeleteKultur">Delete</a>
+            <td class="text-center col-1">
+                <a class="btn btn-orange" asp-route-id="@fact.Key" asp-route-emne="@fact.Value.Emne" asp-page="DeleteFact">Delete</a>
             </td>
         </tr>
         }
@@ -243,7 +243,7 @@
     <a href="#Top" class="text-light">Back to top</a>
 </div>
 
-<h2 class="text-light" id="lyd">Lyd</h2>
+<h2 class="text-light pb-2" id="lyd">Lyd</h2>
 
 <table class="table table-bordered table-black">
     <thead>
@@ -263,20 +263,20 @@
         @foreach (var fact in Model.LydFaktas)
         {
         <tr>
-            <td>
+            <td class="col-1">
                 @fact.Value.Id
             </td>
-            <td>
+            <td class="col-1">
                 @fact.Value.Emne
             </td>
-            <td>
+            <td class="col">
                 @fact.Value.EmneTekst
             </td>
-            <td>
+            <td class="text-center col-1">
                 <a class="btn btn-orange" asp-route-id="@fact.Key" asp-route-emne="@fact.Value.Emne" asp-page="EditFact">Edit</a>
             </td>
-            <td>
-                <a class="btn btn-orange" asp-route-id="@fact.Key" asp-page="Deleted/DeleteLyd">Delete</a>
+            <td class="text-center col-1">
+                <a class="btn btn-orange" asp-route-id="@fact.Key" asp-route-emne="@fact.Value.Emne" asp-page="DeleteFact">Delete</a>
             </td>
         </tr>
         }
@@ -287,7 +287,7 @@
     <a href="#Top" class="text-light">Back to top</a>
 </div>
 
-<h2 class="text-light" id="lys">Lys</h2>
+<h2 class="text-light pb-2" id="lys">Lys</h2>
 
 <table class="table table-bordered table-black">
     <thead>
@@ -307,20 +307,20 @@
         @foreach (var fact in Model.LysFaktas)
         {
         <tr>
-            <td>
+            <td class="col-1">
                 @fact.Value.Id
             </td>
-            <td>
+            <td class="col-1">
                 @fact.Value.Emne
             </td>
-            <td>
+            <td class="col">
                 @fact.Value.EmneTekst
             </td>
-            <td>
+            <td class="text-center col-1">
                 <a class="btn btn-orange" asp-route-id="@fact.Key" asp-route-emne="@fact.Value.Emne" asp-page="EditFact">Edit</a>
             </td>
-            <td>
-                <a class="btn btn-orange" asp-route-id="@fact.Key" asp-page="Deleted/DeleteLys">Delete</a>
+            <td class="text-center col-1">
+                <a class="btn btn-orange" asp-route-id="@fact.Key" asp-route-emne="@fact.Value.Emne" asp-page="DeleteFact">Delete</a>
             </td>
         </tr>
         }
@@ -331,7 +331,7 @@
     <a href="#Top" class="text-light">Back to top</a>
 </div>
 
-<h2 class="text-light" id="musik-genre">Musik Genre</h2>
+<h2 class="text-light pb-2" id="musik-genre">Musik Genre</h2>
 
 <table class="table table-bordered table-black">
     <thead>
@@ -351,20 +351,20 @@
         @foreach (var fact in Model.MusikGenreFaktas)
         {
         <tr>
-            <td>
+            <td class="col-1">
                 @fact.Value.Id
             </td>
-            <td>
+            <td class="col-1">
                 @fact.Value.Emne
             </td>
-            <td>
+            <td class="col">
                 @fact.Value.EmneTekst
             </td>
-            <td>
+            <td class="text-center col-1">
                 <a class="btn btn-orange" asp-route-id="@fact.Key" asp-route-emne="@fact.Value.Emne" asp-page="EditFact">Edit</a>
             </td>
-            <td>
-                <a class="btn btn-orange" asp-route-id="@fact.Key" asp-page="Deleted/DeleteMusikGenre">Delete</a>
+            <td class="text-center col-1">
+                <a class="btn btn-orange" asp-route-id="@fact.Key" asp-route-emne="@fact.Value.Emne" asp-page="DeleteFact">Delete</a>
             </td>
         </tr>
         }
@@ -375,7 +375,7 @@
     <a href="#Top" class="text-light">Back to top</a>
 </div>
 
-<h2 class="text-light" id="politik">Politik</h2>
+<h2 class="text-light pb-2" id="politik">Politik</h2>
 
 <table class="table table-bordered table-black">
     <thead>
@@ -395,20 +395,20 @@
         @foreach (var fact in Model.PolitikFaktas)
         {
         <tr>
-            <td>
+            <td class="col-1">
                 @fact.Value.Id
             </td>
-            <td>
+            <td class="col-1">
                 @fact.Value.Emne
             </td>
-            <td>
+            <td class="col">
                 @fact.Value.EmneTekst
             </td>
-            <td>
+            <td class="text-center col-1">
                 <a class="btn btn-orange" asp-route-id="@fact.Key" asp-route-emne="@fact.Value.Emne" asp-page="EditFact">Edit</a>
             </td>
-            <td>
-                <a class="btn btn-orange" asp-route-id="@fact.Key" asp-page="Deleted/DeletePolitik">Delete</a>
+            <td class="text-center col-1">
+                <a class="btn btn-orange" asp-route-id="@fact.Key" asp-route-emne="@fact.Value.Emne" asp-page="DeleteFact">Delete</a>
             </td>
         </tr>
         }
