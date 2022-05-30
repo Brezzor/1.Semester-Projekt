@@ -31,6 +31,10 @@ namespace _1.Semester_Projekt.Pages
 
         public IActionResult OnPost()
         {
+            if (!ModelState.IsValid)
+            {
+                return Page();
+            }
             repo.UpdateFakta(Fakta);
             return RedirectToPage("/CRUD/Edit");
         }

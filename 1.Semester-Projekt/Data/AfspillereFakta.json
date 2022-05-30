@@ -3,5 +3,10 @@
     "Id": 4,
     "Emne": 100,
     "EmneTekst": "test 1"
+  },
+  "1": {
+    "Id": 1,
+    "Emne": 100,
+    "EmneTekst": "test1"
   }
 }

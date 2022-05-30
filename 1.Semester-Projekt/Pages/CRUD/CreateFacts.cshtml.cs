@@ -28,6 +28,10 @@ namespace _1.Semester_Projekt.Pages
         }
         public IActionResult OnPost()
         {
+            if (!ModelState.IsValid)
+            {
+                return Page();
+            }
             catalog.CreateFakta(Fakta);
             return RedirectToPage("/CRUD/Edit");
         }        

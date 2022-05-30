@@ -56,11 +56,10 @@ namespace _1.Semester_Projekt.Services
         {
             Dictionary<int, Fakta> faktas = GetAllFakta(EmnePath(fakta.Emne));
 
-            if (fakta != null || !faktas.ContainsKey(fakta.Id))
+            if (fakta != null && !faktas.ContainsKey(fakta.Id))
             {
                 faktas.Add(fakta.Id, fakta);
                 JsonFileWritter.WriteToJson(faktas, EmnePath(fakta.Emne));
-
             }
         }
 
@@ -83,7 +82,7 @@ namespace _1.Semester_Projekt.Services
         {
             Dictionary<int, Fakta> faktas = GetAllFakta(EmnePath(fakta.Emne));
 
-            if (fakta != null || !faktas.ContainsKey(fakta.Id))
+            if (fakta != null)
             {
                 faktas[fakta.Id] = fakta;
                 JsonFileWritter.WriteToJson(faktas, EmnePath(fakta.Emne));
