@@ -7,6 +7,8 @@ using System.ComponentModel.DataAnnotations;
 
 namespace _1.Semester_Projekt.Models
 {
+    // Hovedansvarlig: Rasmus
+
     public class Fakta
     {
         [Required]

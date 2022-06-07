@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace _1.Semester_Projekt.Models
 {
+    // Hovedansvarlig: Oliver
+
     public enum Emner
     {
         Afspillere = 100,

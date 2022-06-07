@@ -8,6 +8,8 @@ using _1.Semester_Projekt.Helpers;
 
 namespace _1.Semester_Projekt.Services
 {
+    // Hovedansvarlig: Oliver
+
     public class FaktaJson : IFaktaRepository
     {
         private const string AfspillerePath = "./Data/AfspillereFakta.json";
